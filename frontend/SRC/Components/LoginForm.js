@@ -9,16 +9,6 @@ const Login = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-
-    // Check if passwords match
-    if (password !== verifyPassword) {
-      setError("Passwords do not match");
-      return;
-    }
-
-    // Reset the error message if the passwords match
-    setError("");
-    // Navigate based on the role
     if (role === "Judge") {
       navigate("/judge"); // Redirect to Judge component
     } else if (role === "Registrar") {
